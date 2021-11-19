@@ -26,6 +26,10 @@ function App() {
           <p className="title">&#60;Button disableShadow /&#62;</p>
           <Button disableShadow />
         </div>
+        <div className="button__variant">
+          <p className="title">&#60;Button disabled/&#62;</p>
+          <Button disabled />
+        </div>
       </div>
     </main>
   );
