@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Ubuntu+Mono&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,19 @@ body {
 }
 
 .container {
+  .title {
+    font-family: "Ubuntu Mono", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
   .button__default {
-    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 2rem 0;
   }
 }

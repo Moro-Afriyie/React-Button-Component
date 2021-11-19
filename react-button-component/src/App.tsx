@@ -7,6 +7,7 @@ function App() {
     <main className="container">
       <div className="buttons__container">
         <div className="button__default">
+          <p className="title">&#60;Button /&#62;</p>
           <Button />
         </div>
       </div>
