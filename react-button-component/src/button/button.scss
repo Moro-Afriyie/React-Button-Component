@@ -1,0 +1,21 @@
+button {
+  background-color: #e0e0e0;
+  border: none;
+  width: 81px;
+  height: 36px;
+  color: #3f3f3f;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  box-shadow: 0px 2px 3px 0px #33333333;
+  border-radius: 6px;
+  font-weight: 500;
+  &:hover,
+  &:focus {
+    background-color: #aeaeae;
+  }
+}
