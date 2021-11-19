@@ -29,6 +29,10 @@ function App() {
         <div className="button__variant">
           <p className="title">&#60;Button disabled/&#62;</p>
           <Button disabled />
+          <p className="title">
+            &#60;Button variant=<q>text</q> disabled/&#62;
+          </p>
+          <Button variant="text" disabled />
         </div>
       </div>
     </main>

@@ -15,7 +15,9 @@ const Button: React.FunctionComponent<IButtonProps> = ({
   if (variant === "outline") {
     return <button className="outline">Default</button>;
   } else if (variant === "text") {
-    return <button className="text">Default</button>;
+    return (
+      <button className={disabled ? "textdisabled" : "text"}>Default</button>
+    );
   } else if (disableShadow) {
     return <button className="disableShadow">Default</button>;
   } else if (disabled) {
@@ -25,7 +27,11 @@ const Button: React.FunctionComponent<IButtonProps> = ({
       </button>
     );
   }
-  return <button className="default">Default</button>;
+  return (
+    <button className={disabled ? "default disabled" : "default"}>
+      Default
+    </button>
+  );
 };
 
 export default Button;
