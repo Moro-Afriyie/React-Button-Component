@@ -25,4 +25,12 @@ body {
     flex-direction: column;
     gap: 0.4rem;
   }
+  .button__size {
+    display: flex;
+    gap: 2rem;
+  }
+  .button__colors {
+    display: flex;
+    gap: 2rem;
+  }
 }
