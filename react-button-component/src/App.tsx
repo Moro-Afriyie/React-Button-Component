@@ -12,15 +12,19 @@ function App() {
         </div>
         <div className="button__variant">
           <p className="title">
-            &#60;Button variant= <q>outline</q>/&#62;
+            &#60;Button variant= <q>outline</q> /&#62;
           </p>
           <Button variant="outline" />
         </div>
         <div className="button__variant">
           <p className="title">
-            &#60;Button variant= <q>text</q>/&#62;
+            &#60;Button variant= <q>text</q> /&#62;
           </p>
           <Button variant="text" />
+        </div>
+        <div className="button__variant">
+          <p className="title">&#60;Button disableShadow /&#62;</p>
+          <Button disableShadow />
         </div>
       </div>
     </main>

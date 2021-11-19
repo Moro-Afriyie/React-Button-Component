@@ -11,7 +11,7 @@
   border-radius: 6px;
   font-weight: 500;
 }
-button {
+.default {
   background-color: #e0e0e0;
   border: none;
   @include button();
@@ -45,4 +45,12 @@ button {
   &:focus {
     background-color: rgba(41, 98, 255, 0.1);
   }
+}
+
+.disableShadow {
+  @include button();
+  background-color: #3d5afe;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
 }
