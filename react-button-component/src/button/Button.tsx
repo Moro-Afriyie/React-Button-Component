@@ -55,9 +55,9 @@ const Button: React.FunctionComponent<IButtonProps> = ({
   } else if (color === "primary") {
     return <button className="primary">Default</button>;
   } else if (color === "secondary") {
-    return <button className="secondary">Default</button>;
+    return <button className="secondary">Secondary</button>;
   } else if (color === "danger") {
-    return <button className="danger">Default</button>;
+    return <button className="danger">Danger</button>;
   }
   return (
     <button className={disabled ? "default disabled" : "default"}>
