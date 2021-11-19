@@ -1,7 +1,7 @@
 button {
   background-color: #e0e0e0;
   border: none;
-  width: 81px;
+  width: 88px;
   height: 36px;
   color: #3f3f3f;
   font-family: "Noto Sans JP", sans-serif;
@@ -17,5 +17,37 @@ button {
   &:hover,
   &:focus {
     background-color: #aeaeae;
+  }
+}
+
+.outline {
+  width: 88px;
+  height: 36px;
+  border: 1px solid #3d5afe;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: transparent;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #3d5afe;
+  box-shadow: none;
+  border-radius: 6px;
+  &:hover,
+  &:focus {
+    background-color: rgba(41, 98, 255, 0.1);
+  }
+}
+
+.text {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: #3d5afe;
+  &:hover,
+  &:focus {
+    background-color: rgba(41, 98, 255, 0.1);
   }
 }
