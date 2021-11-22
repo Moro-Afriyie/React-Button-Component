@@ -12,6 +12,16 @@ body {
 }
 
 .container {
+  display: grid;
+  place-items: center;
+}
+.box {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 60rem;
   .heading {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
@@ -22,26 +32,46 @@ body {
     text-align: left;
     color: #4f4f4f;
   }
-  .title {
-    font-family: "Ubuntu Mono", sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-  .button__default {
+  .buttons__container {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 2rem;
+    .title {
+      font-family: "Ubuntu Mono", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 0.7rem;
+    }
+    .button__default {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .button__size {
+      display: flex;
+      gap: 2rem;
+    }
+    .button__colors {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  .button__startIcon,
+  .button__size,
+  .button__colors,
+  .button__disabled {
+    display: flex;
+    justify-content: space-between;
   }
   .button__size {
-    display: flex;
-    gap: 2rem;
+    width: 70%;
   }
-  .button__colors {
-    display: flex;
-    gap: 2rem;
+
+  .button__disabled {
+    width: 60%;
   }
 }
