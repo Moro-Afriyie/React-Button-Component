@@ -1,6 +1,8 @@
 import * as React from "react";
 import "./button.scss";
 import classNames from "classnames";
+import cx from "classnames";
+import styles from "./button.module.scss";
 
 interface IButtonProps {
   variant?: string;
@@ -12,17 +14,41 @@ interface IButtonProps {
   color?: string;
 }
 
+interface IclassNames {
+  default: string;
+  outline: string;
+  text: string;
+  textdisabled: string;
+  disableShadow: string;
+  startIcon: string;
+  endIcon: string;
+  sm: string;
+  md: string;
+  lg: string;
+  primary: string;
+  secondary: string;
+  danger: string;
+}
+
+const initialProps: IButtonProps = {
+  variant: "",
+  startIcon: "",
+  endIcon: "",
+  size: "",
+  color: "",
+};
+
 const Button: React.FunctionComponent<IButtonProps> = ({
-  variant,
+  variant = "",
   disableShadow,
   disabled,
-  startIcon,
-  endIcon,
-  size,
-  color,
+  startIcon = "",
+  endIcon = "",
+  size = "",
+  color = "default",
 }: IButtonProps) => {
   if (variant === "outline") {
-    return <button className="outline">Default</button>;
+    return <button className={styles["outline"]}>Default</button>;
   } else if (variant === "text") {
     return (
       <button className={disabled ? "textdisabled" : "text"}>Default</button>
@@ -60,11 +86,20 @@ const Button: React.FunctionComponent<IButtonProps> = ({
   } else if (color === "danger") {
     return <button className="danger">Danger</button>;
   }
-  return (
-    <button className={disabled ? "default disabled" : "default"}>
-      Default
-    </button>
+
+  const _className = cx(
+    styles[size],
+    styles.button,
+    styles[variant],
+    {
+      [styles.disabled]: disabled,
+      [styles.disableShadow]: disableShadow,
+      disabled,
+    },
+    styles[color]
   );
+
+  return <button className={_className}>Default</button>;
 };
 
 export default Button;
