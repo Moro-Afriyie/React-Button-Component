@@ -1,0 +1,147 @@
+@mixin button {
+  width: 88px;
+  height: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.default {
+  background-color: #e0e0e0;
+  border: none;
+  @include button();
+  color: #3f3f3f;
+  box-shadow: 0px 2px 3px 0px #33333333;
+  &:hover,
+  &:focus {
+    background-color: #aeaeae;
+  }
+}
+
+.outline {
+  border: 1px solid #3d5afe;
+  background-color: transparent;
+  color: #3d5afe;
+  box-shadow: none;
+  @include button();
+  &:hover,
+  &:focus {
+    background-color: rgba(41, 98, 255, 0.1);
+  }
+}
+
+.text {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: #3d5afe;
+  @include button();
+  &:hover,
+  &:focus {
+    background-color: rgba(41, 98, 255, 0.1);
+  }
+}
+.textdisabled {
+  @include button();
+  background: transparent;
+  color: #9e9e9e;
+  border: none;
+}
+
+.disableShadow {
+  @include button();
+  background-color: #3d5afe;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+}
+
+.disabled {
+  @include button();
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  border: none;
+}
+
+.startIcon {
+  @include button();
+  width: 105px;
+  border: none;
+  background-color: #2962ff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+  span {
+    font-size: 1rem;
+  }
+}
+
+.sm {
+  @include button();
+  width: 73px;
+  height: 32px;
+  border: none;
+  background-color: #2962ff;
+  color: #ffffff;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+}
+.md {
+  @include button();
+  width: 81px;
+  height: 36px;
+  border: none;
+  background-color: #2962ff;
+  color: #ffffff;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+}
+.lg {
+  @include button();
+  width: 93px;
+  height: 42px;
+  border: none;
+  background-color: #2962ff;
+  color: #ffffff;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+}
+.primary {
+  @include button();
+  border: none;
+  background-color: #2962ff;
+  color: #ffffff;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+  &:hover,
+  &:focus {
+    background: #0039cb;
+  }
+}
+.danger {
+  @include button();
+  border: none;
+  background-color: #d32f2f;
+  color: #ffffff;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+  &:hover,
+  &:focus {
+    background-color: #9a0007;
+  }
+}
+.secondary {
+  @include button();
+  width: 104px;
+  border: none;
+  background-color: #455a64;
+  color: #ffffff;
+  box-shadow: 0px 2px 3px 0px #0031ca33;
+  &:hover,
+  &:focus {
+    background-color: #1c313a;
+  }
+}
